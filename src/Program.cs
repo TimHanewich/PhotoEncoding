@@ -11,11 +11,11 @@ namespace PhotoEncoder
     {
         public static void Main(string[] args)
         {
-            Encode(@"C:\Users\timh\Videos\2023-12-24 20-31-59.mp4", @"C:\Users\timh\Downloads\PhotoEncoder\pic_enc.png");
-            //PhotoDecoder pd = new PhotoDecoder(System.IO.File.OpenRead(@"C:\Users\timh\Downloads\ct7EiTS.png"));
-            //Stream s = System.IO.File.OpenWrite(@"C:\Users\timh\Downloads\PhotoEncoder\decoded.pdf");
-            //pd.Decode(s);
-            //s.Close();
+            //Encode(@"C:\Users\timh\Downloads\PhotoEncoder\test.txt", @"C:\Users\timh\Downloads\PhotoEncoder\pic_enc.png");
+            PhotoDecoder pd = new PhotoDecoder(System.IO.File.OpenRead(@"C:\Users\timh\Downloads\PhotoEncoder\pic_enc.png"));
+            Stream s = System.IO.File.OpenWrite(@"C:\Users\timh\Downloads\PhotoEncoder\decoded.txt");
+            pd.Decode(s);
+            s.Close();
         }
 
         public static void create()
