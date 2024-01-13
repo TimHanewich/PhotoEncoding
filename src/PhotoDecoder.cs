@@ -61,13 +61,13 @@ namespace PhotoEncoder
         }
         
         //Finds the start index (location) of the breaker signature (what separates the encoded file name values from the file content)
-        public int FindBreakerSignature()
+        private int FindBreakerSignature()
         {
             return FindSequence(Toolkit.BreakerSignature);            
         }
 
         //Finds the start index (location) of the terminator signature that signifies the end of the file content in the RGB pixel values.
-        public int FindTerminatorSignature()
+        private int FindTerminatorSignature()
         {
             return FindSequence(Toolkit.TerminatorSignature);
         }
