@@ -36,8 +36,8 @@ namespace PhotoEncoding
             //Get the dimensions
             int dimensions = DeterminePhotoDimensions();
 
-            //Load everything into a ByteSpitter
-            ByteSpitter bs = new ByteSpitter();
+            //Load everything into a ByteStepper
+            ByteStepper bs = new ByteStepper();
             bs.FileNameBytes = FileNameBytes;
             bs.BreakerSignature = Toolkit.BreakerSignature;
             Stream input_stream = System.IO.File.OpenRead(path);

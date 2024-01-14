@@ -3,7 +3,7 @@ using System;
 
 namespace PhotoEncoding
 {
-    public class ByteSpitter
+    public class ByteStepper
     {
         public byte[] FileNameBytes {get; set;}
         public byte[] BreakerSignature {get; set;} //splits the name bytes and the file content bytes in the image
@@ -14,7 +14,7 @@ namespace PhotoEncoding
         private int OnSegment;//0 = FileNameBytes, 1 = BreakerSignature, 2 = FileContent, 3 = TerminatorSignature
         private int OnIndex;//For the byte arrays that are index-based (everyting besides FileContent), tracks what index we are on now.
 
-        public ByteSpitter()
+        public ByteStepper()
         {
             FileNameBytes = new byte[]{};
             BreakerSignature = new byte[]{};
