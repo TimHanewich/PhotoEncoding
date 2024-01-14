@@ -5,7 +5,7 @@ This C# (.NET) project is capable of encoding any file's binary content into a b
 
 Both the original file name (including extension) and the binary content of the original file is encoded into the RGB values of the pixels of the resulting encoded file. 
 
-As an example, the below image is the fully encoded [**December 2023 Microsoft Power Platform Licensing Guide**](https://go.microsoft.com/fwlink/?linkid=2085130), ~965 KB.
+As an example, the below image is the fully encoded [**December 2023 Microsoft Power Platform Licensing Guide**](https://go.microsoft.com/fwlink/?linkid=2085130), ~965 KB.  
 ![example](https://i.imgur.com/ct7EiTS.png)
 
 ## Why did I make this?
