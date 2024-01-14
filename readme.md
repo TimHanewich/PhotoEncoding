@@ -49,3 +49,6 @@ Console.WriteLine("Your encoded picture has been decoded to '" + OutputFilePath 
 ```
 
 You'll see above that the `PhotoDecoder` class has a function for finding, extracting, and decoding the original file name and extension. Optionally, you can use this to determine the file's original name and then decode the image into a file with the same name, as shown above. Or, at the very least, you can use this to read the extension of the file, thus understanding what file type this is and how to open it.
+
+## Limitations
+Because this C# program uses the [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common) Nuget package and this Nuget package is only supported on Windows machines, this program will **only** run on Windows devices.
