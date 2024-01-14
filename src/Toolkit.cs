@@ -1,6 +1,6 @@
 using System;
 
-namespace PhotoEncoder
+namespace PhotoEncoding
 {
     public class Toolkit
     {

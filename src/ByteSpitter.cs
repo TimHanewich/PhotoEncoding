@@ -1,7 +1,7 @@
-using PhotoEncoder;
+using PhotoEncoding;
 using System;
 
-namespace PhotoEncoder
+namespace PhotoEncoding
 {
     public class ByteSpitter
     {

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Drawing.Imaging;
 using System.Drawing;
 
-namespace PhotoEncoder
+namespace PhotoEncoding
 {
     public class PhotoDecoder
     {

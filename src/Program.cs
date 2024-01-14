@@ -5,20 +5,31 @@ using System.IO;
 using System.Text.Encodings;
 using System.Text;
 
-namespace PhotoEncoder
+namespace PhotoEncoding
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            //Encode(@"C:\Users\timh\Downloads\PhotoEncoder\test.txt", @"C:\Users\timh\Downloads\PhotoEncoder\pic_enc.png");
-            //PhotoDecoder pd = new PhotoDecoder(System.IO.File.OpenRead(@"C:\Users\timh\Downloads\PhotoEncoder\pic_enc.png"));
-            //Stream s = System.IO.File.OpenWrite(@"C:\Users\timh\Downloads\PhotoEncoder\decoded.txt");
-            //pd.Decode(s);
-            //s.Close();
 
-            PhotoEncoder pe = new PhotoEncoder(@"C:\Users\timh\Downloads\PhotoEncoder\test.txt");
-            Console.WriteLine(pe.DeterminePhotoDimensions());
+            //PhotoEncoder pe = new PhotoEncoder(@"C:\Users\timh\Downloads\History of Space Exploration.docx");
+            //pe.Encode(@"C:\Users\timh\Downloads\encoded.png");
+
+            string EncodedFilePath = @"C:\Users\timh\Downloads\encoded.png";
+            string OutputFolderPath = @"C:\Users\timh\Downloads\DECODE HERE";
+
+            PhotoDecoder pd = new PhotoDecoder(System.IO.File.OpenRead(EncodedFilePath));
+            Console.WriteLine(pd.DecodeFileName()); //History of Space Exploration.docx
+            string OutputFilePath = Path.Combine(OutputFolderPath, pd.DecodeFileName());
+            Stream OutputTo = System.IO.File.OpenWrite(OutputFilePath);
+            pd.Decode(OutputTo);
+            OutputTo.Close();
+
+            Console.WriteLine("Your encoded picture has been decoded to '" + OutputFilePath + "'");
+            //Your encoded picture has been decoded to 'C:\Users\timh\Downloads\DECODE HERE\History of Space Exploration.docx'
+            
+
+            
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Text;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace PhotoEncoder
+namespace PhotoEncoding
 {
     public class PhotoEncoder
     {
