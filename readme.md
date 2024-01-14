@@ -1,7 +1,7 @@
 # File to Photo Encoding
 This C# (.NET) project is capable of encoding any file's binary content into a bitmap image, and then decoding the encoded image back to the original file:
 
-![encoding decoding process](https://i.imgur.com/mqCWuYr.png)
+![encoding decoding process](https://i.imgur.com/LY0eXCT.png)
 
 Both the original file name (including extension) and the binary content of the original file is encoded into the RGB values of the pixels of the resulting encoded file. 
 
